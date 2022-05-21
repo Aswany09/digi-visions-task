@@ -1,0 +1,30 @@
+<h2>Products</h2>
+<ng-container *ngFor="let item of _products">
+
+  <mat-card class="product-item">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        <a [routerLink]="['/Product/List', item.id]">
+          {{item.title}}
+        </a>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <span> price: {{item.price}} </span>
+        <i class="material-icons">fiber_manual_record</i>
+        <span> category: {{item.category}} </span>
+        <i class="material-icons">fiber_manual_record</i>
+        <span> rate: {{item.rating.rate}} </span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{item.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/Product/List', item.id]">View</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</ng-container>

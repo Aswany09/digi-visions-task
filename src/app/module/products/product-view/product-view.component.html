@@ -1,0 +1,22 @@
+<mat-card class="product-item" *ngIf="_productDetails">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+
+        {{_productDetails.title}}
+
+    </mat-card-title>
+    <mat-card-subtitle>
+      <span> price: {{_productDetails.price}} </span>
+      <i class="material-icons">fiber_manual_record</i>
+      <span> category: {{_productDetails.category}} </span>
+      <i class="material-icons">fiber_manual_record</i>
+      <span> rate: {{_productDetails.rating.rate}} </span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="_productDetails.image" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>{{_productDetails.description}}</p>
+  </mat-card-content>
+
+</mat-card>
